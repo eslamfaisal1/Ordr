@@ -140,6 +140,23 @@ class CartViewModel {
         }
     }
 
+
+    fun deleteAll() {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+
+                AppDatabase.getInstance(context)?.userDao()?.deleteAll()
+
+                requestProducts()
+                Log.d("shouditdeleted", "e.message!!")
+
+            } catch (e: Throwable) {
+
+                Log.d("eslamfaisalproducts", e.message!!)
+            }
+        }
+    }
+
     fun insertOneToDB(product: Product) {
         CoroutineScope(Dispatchers.IO).launch {
             try {

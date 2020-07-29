@@ -194,6 +194,7 @@ class CartActivity : AppCompatActivity(), CartProductsAdapter.Interaction {
                         cdd.show()
                     }
 
+                    CartViewModel.getInstance(applicationContext)?.deleteAll()
 
                 } else {
 

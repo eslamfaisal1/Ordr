@@ -25,4 +25,7 @@ interface ProductsDao {
 
     @Query("UPDATE cart_products SET count = :newCount WHERE id = :id")
     fun updateTour(newCount: Int, id: String)
+
+    @Query("DELETE FROM cart_products")
+    fun deleteAll()
 }
