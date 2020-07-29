@@ -66,11 +66,6 @@ class MainActivity : AppCompatActivity(), ProductsAdapter.Interaction {
                         productsAdapter.insertProducts(it)
                     }
 
-//                    producList?.let {
-//                        CartViewModel.getInstance(this)?.insertAllToDB(it)
-//                    }
-
-
                 }
                 ERROR -> {
 

@@ -11,7 +11,7 @@ public class LanguageSharedHelper {
 
 
     public static void putLanguage(Context context, String Key, String Value) {
-        sharedPreferences = context.getSharedPreferences("Language_Cash", Context.MODE_PRIVATE);
+        sharedPreferences = context.getSharedPreferences("lan", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         editor.putString(Key, Value);
         editor.commit();
@@ -19,7 +19,7 @@ public class LanguageSharedHelper {
     }
 
     public static String getLanguage(Context contextGetKey, String Key) {
-        sharedPreferences = contextGetKey.getSharedPreferences("Language_Cash", Context.MODE_PRIVATE);
+        sharedPreferences = contextGetKey.getSharedPreferences("lan", Context.MODE_PRIVATE);
         String Value = sharedPreferences.getString(Key, "en");
         return Value;
 
