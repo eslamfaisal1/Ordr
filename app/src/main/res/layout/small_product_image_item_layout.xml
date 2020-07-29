@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_image"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_margin="4dp"
+    android:background="@color/colorWhite"
+    app:actualImageScaleType="centerInside"
+    app:placeholderImageScaleType="centerInside"
+    app:progressBarAutoRotateInterval="1000"
+    app:progressBarImage="@drawable/ic_loading" />

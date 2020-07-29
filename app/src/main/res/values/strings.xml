@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ordr</string>
+    <string name="cart">Cart</string>
+    <string name="left_in_stock">Left in stock</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="total_price">Total price :</string>
+    <string name="please_enter_name">Please enter name</string>
+    <string name="please_inter_phone">Please enter phone</string>
+    <string name="please_enter_address">Please enter address</string>
+    <string name="item_price">Item price: </string>
+    <string name="order_placed_successful">Order Placed Successful !</string>
+    <string name="your_order_have_been_placed_successfully">Your order have been placed successfully</string>
+    <string name="done">Done</string>
+</resources>
