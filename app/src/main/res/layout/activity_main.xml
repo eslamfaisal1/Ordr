@@ -32,6 +32,7 @@
             android:src="@drawable/ic_uk_language" />
 
         <LinearLayout
+            android:onClick="changeLanguage"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:background="@drawable/shape_language_border"
@@ -41,10 +42,12 @@
             android:paddingEnd="8dp">
 
             <TextView
+                android:textAllCaps="true"
+                android:id="@+id/language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="EN"
+                android:text="@string/en"
                 android:textColor="@color/colorAccent"
                 android:textSize="14sp" />
 

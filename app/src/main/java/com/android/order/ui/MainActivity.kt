@@ -14,19 +14,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager.widget.ViewPager
+import com.android.order.*
 import com.android.order.Constants.PRODUCT
-import com.android.order.Constants.PRODUCT_ID
-import com.android.order.R
 import com.android.order.adapters.AdapterImageSlider
 import com.android.order.adapters.ProductsAdapter
 import com.android.order.models.Image
 import com.android.order.models.Product
-import com.android.order.models.Status
 import com.android.order.models.Status.*
 import com.android.order.ui.cart.CartActivity
 import com.android.order.ui.cart.CartViewModel
 import com.android.order.ui.product_details.ProductDetailsActivity
 import com.android.order.ui.viewmodel.ProductsViewModel
+import com.android.order.utils.LanguageSharedHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -43,6 +42,7 @@ class MainActivity : AppCompatActivity(), ProductsAdapter.Interaction {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setLangauge()
         productsViewModel = ViewModelProvider(this).get(ProductsViewModel::class.java)
 
         val images: MutableList<Image> = ArrayList()
@@ -191,5 +191,12 @@ class MainActivity : AppCompatActivity(), ProductsAdapter.Interaction {
         startActivity(intent)
     }
 
+    fun changeLanguage(view: View) {
+        changeLanguage(this)
+    }
+
+    fun setLangauge(){
+        language.text = LanguageSharedHelper.getLanguage(this, Constants.LANGUAGE);
+    }
 
 }

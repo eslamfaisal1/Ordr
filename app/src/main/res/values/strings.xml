@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Ordr</string>
+
+    <string name="en" translatable="false">en</string>
+    <string name="ar" translatable="false">ar</string>
+
     <string name="cart">Cart</string>
     <string name="left_in_stock">Left in stock</string>
     <string name="name">Name</string>

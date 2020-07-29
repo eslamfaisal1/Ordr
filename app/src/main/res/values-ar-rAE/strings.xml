@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Ordr</string>
+    <string name="cart">سلة المشتريات</string>
+    <string name="left_in_stock">متبقى فى المتجر</string>
+    <string name="name">الاسم</string>
+    <string name="phone">رقم الهاتق</string>
+    <string name="address">العنوان</string>
+    <string name="total_price">السعر الكلى :</string>
+    <string name="please_enter_name">برجاء ادخال الاسم</string>
+    <string name="please_inter_phone">برجاء ادخال رقم الهاتف</string>
+    <string name="please_enter_address">برجاء ادخال العنوان</string>
+    <string name="item_price">سعر المنتج: </string>
+    <string name="order_placed_successful">تم الطلب بنجاح !</string>
+    <string name="your_order_have_been_placed_successfully">تم طلب منتجاتك بنجاح</string>
+    <string name="done">تم</string>
+
+
+</resources>
