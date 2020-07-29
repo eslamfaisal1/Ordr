@@ -30,16 +30,14 @@ class ProductsViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     response.body()?.let {
                         setProductsListResponse(Resource.success(it))
-                    } ?: Log.d("eslamfaisalproducts", response.message())
+                    } 
 
                 } else {
-                    Log.d("eslamfaisalproducts", response.message())
                 }
 
 
             } catch (e: Throwable) {
 
-                Log.d("eslamfaisalproducts", e.message!!)
             }
         }
 
