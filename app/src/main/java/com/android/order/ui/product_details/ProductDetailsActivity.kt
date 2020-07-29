@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.order.Constants
 import com.android.order.Constants.PRODUCT
 import com.android.order.R
 import com.android.order.adapters.SmallProductImagesAdapter
@@ -17,6 +18,8 @@ import com.android.order.models.*
 import com.android.order.models.Status.*
 import com.android.order.networking.RetrofitClient
 import com.android.order.ui.cart.CartViewModel
+import com.android.order.ui.cart.CartViewModel.Companion.context
+import com.android.order.utils.LanguageSharedHelper
 import kotlinx.android.synthetic.main.activity_product_details.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -128,7 +131,15 @@ class ProductDetailsActivity : AppCompatActivity() {
     private fun setProductData(it: ProductDetails) {
         productDetails = it
         product_image.setImageURI(it.heroImage)
-        product_name.text = (it.name)
+        when (LanguageSharedHelper.getLanguage(this, Constants.LANGUAGE)) {
+            "ar" -> {
+                product_name.text = it.nameInArabic
+            }
+
+            "en" -> {
+                product_name.text = it.name
+            }
+        }
 
         description.settings.javaScriptEnabled = true
         description.loadDataWithBaseURL("", it.description, "text/html", "UTF-8", "")

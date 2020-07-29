@@ -248,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/shape_bg_button_red"
-                    android:text="Buy"
+                    android:text="@string/buy"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
                     android:textSize="18sp"

@@ -8,8 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.android.order.Constants
 import com.android.order.R
 import com.android.order.models.Product
+import com.android.order.utils.LanguageSharedHelper
 import com.facebook.drawee.view.SimpleDraweeView
 
 class CartProductsAdapter(
@@ -37,7 +39,16 @@ class CartProductsAdapter(
         val product: Product = listProfucts[position]
         holder.product_image.setImageURI(product.heroImage)
 
-        holder.name.text = product.name
+        when (LanguageSharedHelper.getLanguage(holder.itemView.context, Constants.LANGUAGE)) {
+            "ar" -> {
+                holder.name.text = product.nameInArabic
+            }
+
+            "en" -> {
+                holder.name.text = product.name
+            }
+        }
+
         holder.count.text = product.count.toString()
         product.price?.let {
             val total: Double = product.price!! * product.count
